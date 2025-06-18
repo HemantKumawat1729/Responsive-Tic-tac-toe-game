@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Baloo+Bhaina+2:wght@400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+.heading{
+    width: 100vw;
+    height: auto;
+    background-color: aqua;
+}
+h1{
+    text-align: center;
+    padding: 10px;
+}
+.container{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.game-container{  
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    position: relative;
+}
+.line{
+    position: absolute;
+    height: 0.5%;
+    background-color: red;
+    transform-origin: top left;
+    display: none;
+}
+.info-container{
+    width:20vw;
+}
+.info-container #turn{
+    text-align: center;
+    font-size: calc(20px + 2vw);
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    font-size:9vw;
+    font-family: "Outfit", sans-serif;
+    cursor:pointer;
+}
+.box:hover{
+    background-color: rgb(190, 233, 217);
+}
+#reset{
+    font-size: calc(20px + 1vw);
+    padding: 2px 7px;
+    display: block;
+    margin: 7px auto;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: chartreuse;
+}
+#reset:hover{
+    transform: scale(1.2);
+    transition: all 0.1s ease-in-out;
+}
+.bl-0{
+    border-left: 0;
+}
+.br-0{
+    border-right: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+img{
+    width: 0;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: width ease-in 1s;
+}
+
+@media (max-width: 950px){
+     .container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+     }
+     .game-container{
+    grid-template-columns: repeat(3,25vw);
+    grid-template-rows: repeat(3,25vw);
+     }
+     .boxtext{
+        font-size: 23vw;
+     }
+     #turn{
+        font-size: calc(30px + 6vw);
+     }
+     .info-container{
+        width: 80vw;
+        margin-top: 30px;
+     }
+     
+}
