@@ -66,7 +66,7 @@ function checkDraw(){
 
 }
 
-// music.play();
+music.play();
 //Game logic function
 Array.from(boxes).forEach((box)=>{  
     let boxtext=box.querySelector("span");
